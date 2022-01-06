@@ -24,35 +24,37 @@ settings():
     user.code_protected_variable_formatter = "PRIVATE_CAMEL_CASE"
     user.code_public_variable_formatter = "PRIVATE_CAMEL_CASE"
 
-(op | is) strict equal: " === "
-(op | is) strict not equal: " !== "
+sure is: " === "
+sure isn't: " !== "
 
-state const: "const "
+async: "async "
+await: "await "
+const: "const "
+export: "export "
+let: "let "
+var: "var "
 
-state let: "let "
+spread: "..."
+swipe: ", "
 
-state var: "var "
-
-state export: "export "
-
-state async: "async "
-
-state await: "await "
-
-state map:
-    insert(".map()")
+complete lamb:
+    key(end)
+    insert(" => {}")
     key(left)
-
-state filter:
-    insert(".filter()")
-    key(left)
-
-state reduce:
-    insert(".reduce()")
-    key(left)
-
-state spread: "..."
+    key(enter)
 
 from import:
     insert(' from  ""')
     key("left")
+
+print:
+    insert("console.log()")
+    key(left)
+
+lamb funk <user.text>: user.js_lambda_function(text)
+
+lamb funk <user.text> of <user.text>: user.js_lambda_function_of(text_1, text_2)
+
+med <user.text>: user.js_method(text)
+
+proper <user.text>: user.js_property(text)

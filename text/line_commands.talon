@@ -1,8 +1,7 @@
 tag: user.line_commands
 -
 #this defines some common line commands. More may be defined that are ide-specific.
-lend: edit.line_end()
-bend: edit.line_start()
+
 go <number>: edit.jump_line(number)
 go <number> end: 
     edit.jump_line(number)
@@ -13,30 +12,30 @@ comment [line] <number>:
 comment <number> until <number>: 
     user.select_range(number_1, number_2)
     code.toggle_comment()
-clear [line] <number>:
+kill [line] <number>:
     edit.jump_line(number)
     user.select_range(number, number)
     edit.delete()
-clear <number> until <number>: 
+kill <number> until <number>:
     user.select_range(number_1, number_2)
     edit.delete()
-copy [line] <number>: 
+cop [line] <number>:
     user.select_range(number, number)
     edit.copy()
-copy <number> until <number>: 
+cop <number> until <number>:
     user.select_range(number_1, number_2)
     edit.copy()
-cut [line] <number>: 
+cut [line] <number>:
     user.select_range(number, number)
     edit.cut()
-cut [line] <number> until <number>: 
+cut [line] <number> until <number>:
     user.select_range(number_1, number_2)
     edit.cut()
-(paste | replace) <number> until <number>:
+(paish | replace) <number> until <number>:
     user.select_range(number_1, number_2)
     edit.paste()
-(select | cell | sell) [line] <number>: user.select_range(number, number)
-(select | cell | sell) <number> until <number>: user.select_range(number_1, number_2)
+(grab | cell | sell) [line] <number>: user.select_range(number, number)
+(grab | cell | sell) <number> until <number>: user.select_range(number_1, number_2)
 tab that: edit.indent_more()
 tab [line] <number>:
     edit.jump_line(number)

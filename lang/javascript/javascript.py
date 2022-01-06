@@ -23,6 +23,39 @@ tag: user.javascript
 # }
 
 
+@mod.action_class
+class Actions:
+    # Unique actions for TypeScript
+
+    def js_lambda_function(text: str):
+        """Formats a lambda function"""
+        actions.auto_insert("const ")
+        actions.insert(actions.user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+        actions.auto_insert(" = () => {}")
+        actions.key("left")
+        actions.key("enter")
+
+    def js_lambda_function_of(text: str, text2: str):
+        """Formats a lambda function"""
+        actions.auto_insert("const ")
+        actions.insert(actions.user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+        actions.auto_insert(" = ()")
+        actions.key("left")
+        actions.insert(actions.user.formatted_text(text2, "PRIVATE_CAMEL_CASE"))
+
+    def js_method(text: str):
+        """Formats a method"""
+        actions.auto_insert(".")
+        actions.insert(actions.user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+        actions.auto_insert("()")
+        actions.key("left")
+
+    def js_property(text: str):
+        """Formats a property"""
+        actions.auto_insert(".")
+        actions.insert(actions.user.formatted_text(text, "PRIVATE_CAMEL_CASE"))
+
+
 @ctx.action_class("user")
 class UserActions:
     def code_insert_is_not_null():
