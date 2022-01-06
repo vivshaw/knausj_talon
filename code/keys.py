@@ -114,8 +114,8 @@ ctx = Context()
 modifier_keys = {
     # If you find 'alt' is often misrecognized, try using 'alter'.
     "alt": "alt",  #'alter': 'alt',
-    "control": "ctrl",  #'troll':   'ctrl',
-    "shift": "shift",  #'sky':     'shift',
+    "troll": "ctrl",  #'troll':   'ctrl',
+    "sky": "shift",  #'sky':     'shift',
     "super": "super",
 }
 if app.platform  == "mac":
@@ -133,7 +133,6 @@ punctuation_words = {
     "`": "`",
     ",": ",",  # <== these things
     "back tick": "`",
-    "grave": "`",
     "comma": ",",
     "period": ".",
     "full stop": ".",
@@ -174,6 +173,7 @@ symbol_key_words = {
     "tilde": "~",
     "bang": "!",
     "down score": "_",
+    "score": "_",
     "under score": "_",
     "paren": "(",
     "L paren": "(",
@@ -225,16 +225,16 @@ simple_keys = [
     "insert",
     "pagedown",
     "pageup",
-    "space",
     "tab",
 ]
 
 alternate_keys = {
-    "delete": "backspace",
-    "forward delete": "delete",
-    #'junk': 'backspace',
+    "scratch": "backspace",
+    "kill": "delete",
+    'ta': "space",
     "page up": "pageup",
     "page down": "pagedown",
+    "cape": "escape"
 }
 # mac apparently doesn't have the menu key.
 if app.platform in ("windows", "linux"):

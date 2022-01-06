@@ -116,7 +116,7 @@ class EditActions:
     def select_all():
         actions.key('ctrl-a')
     def select_line(n: int=None):
-        actions.key('end shift-home')
+        actions.key('home home shift-end')
         #action(edit.select_lines(a: int, b: int)):
     def select_none():
         actions.key('right')

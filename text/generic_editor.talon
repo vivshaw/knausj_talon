@@ -10,16 +10,16 @@ go word left:
 go word right:
     edit.word_right()
 
-go left:
+lep:
     edit.left()
 
-go right:
+rock:
     edit.right()
 
-go up:
+hub:
     edit.up()
 
-go down:
+dune:
     edit.down()
 
 go line start:
@@ -28,17 +28,17 @@ go line start:
 go line end:
     edit.line_end()
 
-go way left:
+lep way:
     edit.line_start()
     edit.line_start()
 
-go way right:
+rock way:
     edit.line_end()
 
-go way down:
+dune way:
     edit.file_end()
 
-go way up:
+hub way:
     edit.file_start()
     
 go bottom:
@@ -54,43 +54,43 @@ go page up:
     edit.page_up()
 
 # selecting
-select line:
+grab line:
     edit.select_line()
 
-select all:
+grab all:
     edit.select_all()
 
-select left:
+grab lep:
     edit.extend_left()
 
-select right:
+grab rock:
     edit.extend_right()
 
-select up:
+grab hub:
     edit.extend_line_up()
 
-select down:
+grab dune:
     edit.extend_line_down()
 
-select word:
+grab word:
     edit.select_word()
 
-select word left:
+grab lep word:
     edit.extend_word_left()
 
-select word right:
+grab rock word:
     edit.extend_word_right()
 
-select way left:
+grab lep way:
     edit.extend_line_start()
 
-select way right:
+grab rock way:
     edit.extend_line_end()
 
-select way up:
+grab hub way:
     edit.extend_file_start()
 
-select way down:
+grab dune way:
     edit.extend_file_end()
 
 # editing
@@ -101,51 +101,41 @@ indent [more]:
     edit.indent_less()
 
 # deleting
-clear line:
+kill line:
     edit.delete_line()
 
-clear left:
-    key(backspace)
-
-clear right:
-    key(delete)
-
-clear up:
+kill up:
     edit.extend_line_up()
     edit.delete()
 
-clear down:
+kill down:
     edit.extend_line_down()
     edit.delete()
 
-clear word:
+scratch word:
     edit.delete_word()
 
-clear word left:
-    edit.extend_word_left()
-    edit.delete()
-
-clear word right:
+kill word:
     edit.extend_word_right()
     edit.delete()
 
-clear way left:
+scratch way:
     edit.extend_line_start()
     edit.delete()
 
-clear way right:
+kill way:
     edit.extend_line_end()
     edit.delete()
 
-clear way up:
+kill up way:
     edit.extend_file_start()
     edit.delete()
 
-clear way down:
+kill down way:
     edit.extend_file_end()
     edit.delete()
 
-clear all:
+kill all:
     edit.select_all()
     edit.delete()
 

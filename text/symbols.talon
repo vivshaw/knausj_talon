@@ -4,7 +4,7 @@ double dash: "--"
 (bracket | brack | left bracket): "{"
 (rbrack | are bracket | right bracket): "}"
 triple quote: "'''"
-(triple grave | triple back tick | gravy):
+(triple grave | triple back tick):
     insert("```")
 (dot dot | dotdot): ".."
 ellipses: "..."

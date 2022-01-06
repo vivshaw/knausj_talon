@@ -16,32 +16,39 @@ settings():
     user.code_protected_variable_formatter = "PRIVATE_CAMEL_CASE"
     user.code_public_variable_formatter = "PRIVATE_CAMEL_CASE"
     
-(op | is) strict equal: " === "
-(op | is) strict not equal: " !== "
+sure is: " === "
+sure isn't: " !== "
 
-state const: "const "
+async: "async "
+await: "await "
+const: "const "
+interface: "interface "
+let: "let "
+type: "type "
+var: "var "
 
-state let: "let "
+is of: ": "
+spread: "..."
+swipe: ", "
 
-state var: "var "
-
-state async: "async "
-
-state await: "await "
-
-state map:
-    insert(".map()")
+print:
+    insert("console.log()")
     key(left)
-    
-state filter:
-    insert(".filter()")
+
+lamb funk <user.text>: user.typescript_lambda_function(text)
+
+lamb funk <user.text> of <user.text>: user.typescript_lambda_function_of(text_1, text_2)
+
+med <user.text>: user.typescript_method(text)
+
+proper <user.text>: user.typescript_property(text)
+
+complete:
+    key(end)
+    insert(" => {}")
     key(left)
-    
-state reduce:
-    insert(".reduce()")
-    key(left)
-    
-state spread: "..."
+    key(enter)
+
 
 ^funky <user.text>$: user.code_default_function(text)
 ^pro funky <user.text>$: user.code_protected_function(text)
