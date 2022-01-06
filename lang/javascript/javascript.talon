@@ -25,8 +25,10 @@ settings():
     user.code_protected_variable_formatter = "PRIVATE_CAMEL_CASE"
     user.code_public_variable_formatter = "PRIVATE_CAMEL_CASE"
 
+spread: "..."
 sure is: " === "
 sure isn't: " !== "
+swipe: ", "
 
 async: "async "
 await: "await "
@@ -35,8 +37,7 @@ export: "export "
 let: "let "
 var: "var "
 
-spread: "..."
-swipe: ", "
+note environment: insert('process.env.NODE_ENV')
 
 complete lamb:
     key(end)
