@@ -7,6 +7,7 @@ and code.language: typescript
 tag(): user.code_operators
 tag(): user.code_comment
 tag(): user.code_generic
+tag(): user.javascript
 
 settings():
     user.code_private_function_formatter = "PRIVATE_CAMEL_CASE"
